@@ -1,0 +1,14 @@
+def maxSubarraySum(arr,n):
+    m=arr[0]
+    t=0
+    for i in range(n):
+        t+=arr[i]
+        if t>m:
+            m=t
+        if t<0:
+            t=0
+    if m<0:
+       return 0
+    else:
+        return m
+
