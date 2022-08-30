@@ -1,0 +1,12 @@
+def countTheNumber(arr, n, k):
+    d={}
+    a=[]
+    for i in arr:
+        if i in d:
+            d[i]+=1
+        else:
+            d[i]=1
+    for i in sorted(d,key=d.get,reverse=True):
+        if(d[i]>=(n//k)):
+            a.append(i)
+    return a
