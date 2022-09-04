@@ -1,0 +1,9 @@
+def removeDuplicates(str1, n):
+    l=[]
+    s=set()
+    for i in str1:
+        if i not in s:
+            l.append(i)
+            s.add(i)
+    s1=''.join(l)
+    return s1
