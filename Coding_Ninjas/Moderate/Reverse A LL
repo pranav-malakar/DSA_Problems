@@ -1,0 +1,18 @@
+def reverseLL(head, low: int, high: int):
+    curr=head
+    n=1
+    l=[]
+    while curr is not None:
+        if n>=low and n<=high:
+            l.append(curr.data)
+        n+=1
+        curr=curr.next
+    curr=head
+    n=1
+    while curr is not None:
+        if n>=low and n<=high:
+            t=l.pop()
+            curr.data=t
+        curr=curr.next
+        n+=1
+    return head
