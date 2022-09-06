@@ -1,0 +1,9 @@
+def kthSpecialNumber(l: int, r: int, k: int) -> int:
+    cnt=1
+    for i in range(l,r+1,1):
+        t=(bin(i))[2:]
+        if "101" in t:
+            if cnt==k:
+                return i
+            cnt+=1
+    return -1
