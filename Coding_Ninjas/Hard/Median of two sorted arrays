@@ -1,0 +1,22 @@
+def median(a, b):
+    l1,l2=len(a),len(b)
+    i,j=0,0
+    temp=[]
+    while (i<l1 and j<l2):
+        if(a[i]<=b[j]):
+            temp.append(a[i])
+            i+=1
+        elif(b[j]<a[i]):
+            temp.append(b[j])
+            j+=1
+    while i<l1:
+        temp.append(a[i])
+        i+=1
+    while j<l2:
+        temp.append(b[j])
+        j+=1
+    l3=len(temp)
+    if l3%2!=0:
+        return (temp[l3//2]/1)
+    else:
+        return (temp[l3//2]+temp[(l3//2)-1])/2
