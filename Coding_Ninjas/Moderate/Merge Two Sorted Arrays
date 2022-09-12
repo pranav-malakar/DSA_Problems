@@ -1,0 +1,8 @@
+def ninjaAndSortedArrays(arr1,arr2,m,n):
+    j=0
+    for i in range(n):
+        while(arr2[i]>arr1[j] and j<(m+n-1) and arr1[j]!=0):
+            j+=1
+        arr1.pop()
+        arr1.insert(j,arr2[i])
+    return arr1
